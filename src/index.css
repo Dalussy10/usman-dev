@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+    html {
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+a {
+text-decoration: none !important;
+color:inherit;
+}
+    a:hover {
+        text-decoration: none !important;
+    }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 ,
+p{
+  font-family: 'Manrope', sans-serif;
+}
