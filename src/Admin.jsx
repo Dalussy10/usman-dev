@@ -32,7 +32,7 @@ const Admin = () => {
     if (!isAuthenticated) return;
 
     setLoading(true);
-    fetch('http://localhost:5000/api/schedule')
+    fetch('https://usman-backend.onrender.com/api/schedule')
       .then(res => res.json())
       .then(data => {
         setCalls(data);
@@ -45,7 +45,7 @@ const handleDelete = async (id) => {
   if (!window.confirm('Are you sure you want to delete this call?')) return;
 
   try {
-    const response = await fetch(`http://localhost:5000/api/schedule/${id}`, {
+    const response = await fetch(`https://usman-backend.onrender.com/api/schedule/${id}`, {
       method: 'DELETE',
     });
 

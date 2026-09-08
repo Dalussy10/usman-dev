@@ -20,7 +20,7 @@ const handleSubmit = async (e) => {
   setMessage('');
 
   try {
-    const response = await fetch('http://localhost:5000/api/schedule',{
+    const response = await fetch('https://usman-backend.onrender.com/api/schedule',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
