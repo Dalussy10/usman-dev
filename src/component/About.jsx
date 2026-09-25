@@ -1,233 +1,279 @@
 
+import {
+  Code2,
+  Database,
+  Gauge,
+  Layers3,
+  MonitorSmartphone,
+  Palette,
+  Server,
+  Sparkles,
+} from "lucide-react";
+
 const About = () => {
-    return (
+  const coreStack = [
+    {
+      name: "React",
+      description: "Component-based interfaces",
+      icon: Code2,
+    },
+    {
+      name: "JavaScript",
+      description: "Interactive web experiences",
+      icon: Sparkles,
+    },
+    {
+      name: "Tailwind CSS",
+      description: "Responsive UI development",
+      icon: Palette,
+    },
+    {
+      name: "Express.js",
+      description: "Backend and API development",
+      icon: Server,
+    },
+  ];
 
-        
-<section
-    id="about"
-    className="relative py-24 px-6 md:px-12 lg:px-20 bg-gray-50 overflow-hidden"
->
-    {/* Background Decoration */}
-    <div className="absolute top-0 right-0 w-72 h-72 bg-indigo-200/20 rounded-full blur-3xl"></div>
+  const exploring = [
+    {
+      name: "Node.js",
+      icon: Server,
+    },
+    {
+      name: "PostgreSQL",
+      icon: Database,
+    },
+    {
+      name: "Web Performance",
+      icon: Gauge,
+    },
+    {
+      name: "Design Systems",
+      icon: Layers3,
+    },
+  ];
 
-    <div className="relative z-10 max-w-7xl mx-auto">
+  return (
+    <main className="relative overflow-hidden bg-gray-50">
+      {/* Background decoration */}
+      <div
+        aria-hidden="true"
+        className="absolute -right-40 top-20 h-96 w-96 rounded-full bg-indigo-500/10 blur-3xl"
+      />
 
-        {/* Section Heading */}
-        <div className="text-center mb-16">
+      <div
+        aria-hidden="true"
+        className="absolute -left-40 bottom-20 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl"
+      />
 
-            <span className="inline-block px-4 py-2 mb-4 rounded-full bg-indigo-100 text-indigo-600 text-sm font-semibold">
-                About Me
-            </span>
+      <section className="relative mx-auto max-w-7xl px-6 py-20 md:px-12 md:py-24 lg:px-20">
+        {/* Header */}
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-600">
+            <Sparkles size={15} />
+            About Me
+          </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
-                Skills & Experience
-            </h1>
+          <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl">
+            Skills &{" "}
+            <span className="text-indigo-600">Experience</span>
+          </h1>
 
-            <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
-                Building modern, responsive and high-performance web experiences
-                with clean and scalable code.
-            </p>
-
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Building modern, responsive, and high-performance web experiences
+            with clean, maintainable, and scalable code.
+          </p>
         </div>
 
+        {/* Main content */}
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {/* About card */}
+          <article className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-xl md:p-10">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-indigo-100 text-indigo-600">
+                <Code2 size={24} />
+              </div>
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-
-            {/* LEFT — About */}
-            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
-
-                <div className="flex items-center gap-4 mb-8">
-
-                    <div className="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-2xl">
-                        👨‍💻
-                    </div>
-
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                            Frontend Engineer
-                        </h2>
-
-                        <p className="text-indigo-600 font-medium">
-                            React-focused Developer
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <p className="text-lg leading-relaxed text-gray-600 mb-6">
-                    Hey, I'm Usman Dalhat, a React-focused Frontend Developer
-                    based in Kaduna. I specialize in building high-performance,
-                    responsive, and maintainable user interfaces that feel great
-                    to use on any device.
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
+                  Frontend Developer
                 </p>
 
-                <p className="text-lg leading-relaxed text-gray-600 mb-6">
-                    With {new Date().getFullYear() - 2025}+ years of experience
-                    turning complex designs and product requirements into clean,
-                    scalable code, I care deeply about performance,
-                    accessibility, developer experience, and writing code that
-                    is easy for teams to understand and extend.
-                </p>
-
-                <p className="text-lg leading-relaxed text-gray-600">
-                    When I'm not coding, you'll find me exploring Kaduna's food
-                    scene, reading about web performance optimization, or
-                    tweaking my mechanical keyboard setup.
-                </p>
-
-
-                {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-gray-100">
-
-                    <div>
-                        <h3 className="text-3xl font-bold text-indigo-600">
-                            5+
-                        </h3>
-
-                        <p className="text-sm text-gray-500 mt-1">
-                            Projects
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-3xl font-bold text-indigo-600">
-                            2+
-                        </h3>
-
-                        <p className="text-sm text-gray-500 mt-1">
-                            Years Learning
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-3xl font-bold text-indigo-600">
-                            100%
-                        </h3>
-
-                        <p className="text-sm text-gray-500 mt-1">
-                            Commitment
-                        </p>
-                    </div>
-
-                </div>
-
+                <h2 className="mt-1 text-2xl font-bold text-gray-950">
+                  React-focused Developer
+                </h2>
+              </div>
             </div>
 
+            <div className="mt-8 space-y-5 text-base leading-8 text-gray-600">
+              <p>
+                Hey, I'm{" "}
+                <strong className="font-semibold text-gray-900">
+                  Usman Dalhat
+                </strong>
+                , a React-focused Frontend Developer based in Kaduna. I enjoy
+                building responsive, maintainable, and user-friendly
+                interfaces that work smoothly across different devices.
+              </p>
 
-            {/* RIGHT — Skills */}
-            <div className="space-y-8">
+              <p>
+                My focus is on turning ideas and designs into functional web
+                experiences while paying close attention to performance,
+                accessibility, responsive design, and clean code.
+              </p>
 
-                {/* Core Stack */}
-                <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                        Core Stack
-                    </h3>
-
-                    <div className="grid grid-cols-2 gap-4">
-
-                        <div className="group p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-indigo-300 hover:bg-indigo-50 transition-all duration-300">
-                            <p className="font-semibold text-gray-900">
-                                React
-                            </p>
-
-                            <p className="text-sm text-gray-500 mt-1">
-                                Frontend
-                            </p>
-                        </div>
-
-                        <div className="group p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-indigo-300 hover:bg-indigo-50 transition-all duration-300">
-                            <p className="font-semibold text-gray-900">
-                                JavaScript
-                            </p>
-
-                            <p className="text-sm text-gray-500 mt-1">
-                                Programming
-                            </p>
-                        </div>
-
-                        <div className="group p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-indigo-300 hover:bg-indigo-50 transition-all duration-300">
-                            <p className="font-semibold text-gray-900">
-                                Tailwind CSS
-                            </p>
-
-                            <p className="text-sm text-gray-500 mt-1">
-                                Styling
-                            </p>
-                        </div>
-
-                        <div className="group p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-indigo-300 hover:bg-indigo-50 transition-all duration-300">
-                            <p className="font-semibold text-gray-900">
-                                React Query
-                            </p>
-
-                            <p className="text-sm text-gray-500 mt-1">
-                                Data Fetching
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                {/* Currently Exploring */}
-                <div className="relative overflow-hidden rounded-3xl bg-gray-900 p-8 text-white shadow-xl">
-
-                    <div className="absolute -right-16 -top-16 w-40 h-40 bg-indigo-600/30 rounded-full blur-2xl"></div>
-
-                    <div className="relative">
-
-                        <div className="flex items-center gap-3 mb-5">
-
-                            <div className="w-10 h-10 rounded-lg bg-indigo-500/20 flex items-center justify-center">
-                                🚀
-                            </div>
-
-                            <h3 className="text-2xl font-bold">
-                                Currently Exploring
-                            </h3>
-
-                        </div>
-
-                        <p className="text-gray-300 text-lg leading-relaxed">
-                            React Server Components, backend development,
-                            scalable design systems, and improving Core Web
-                            Vitals on large applications.
-                        </p>
-
-
-                        {/* Technologies */}
-                        <div className="flex flex-wrap gap-2 mt-6">
-
-                            <span className="px-3 py-1.5 rounded-lg bg-white/10 text-sm">
-                                React Server Components
-                            </span>
-
-                            <span className="px-3 py-1.5 rounded-lg bg-white/10 text-sm">
-                                Node.js
-                            </span>
-
-                            <span className="px-3 py-1.5 rounded-lg bg-white/10 text-sm">
-                                Web Performance
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+              <p>
+                I'm also expanding beyond frontend development by working with
+                backend technologies, APIs, databases, and the tools required
+                to build complete web applications.
+              </p>
             </div>
 
+            {/* Stats */}
+            <div className="mt-8 grid grid-cols-3 divide-x divide-gray-200 rounded-2xl border border-gray-200 bg-gray-50">
+              <div className="px-3 py-5 text-center">
+                <p className="text-2xl font-extrabold text-indigo-600">
+                  4+
+                </p>
+
+                <p className="mt-1 text-xs font-medium text-gray-500 sm:text-sm">
+                  Projects
+                </p>
+              </div>
+
+              <div className="px-3 py-5 text-center">
+                <p className="text-2xl font-extrabold text-indigo-600">
+                  React
+                </p>
+
+                <p className="mt-1 text-xs font-medium text-gray-500 sm:text-sm">
+                  Primary Stack
+                </p>
+              </div>
+
+              <div className="px-3 py-5 text-center">
+                <p className="text-2xl font-extrabold text-indigo-600">
+                  Full-Stack
+                </p>
+
+                <p className="mt-1 text-xs font-medium text-gray-500 sm:text-sm">
+                  Growing Focus
+                </p>
+              </div>
+            </div>
+          </article>
+
+          {/* Skills */}
+          <div className="space-y-8">
+            {/* Core stack */}
+            <article className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm md:p-10">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider text-indigo-600">
+                    Technologies
+                  </p>
+
+                  <h2 className="mt-1 text-2xl font-bold text-gray-950">
+                    Core Stack
+                  </h2>
+                </div>
+
+                <MonitorSmartphone
+                  size={28}
+                  className="text-indigo-500"
+                  aria-hidden="true"
+                />
+              </div>
+
+              <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                {coreStack.map((technology) => {
+                  const Icon = technology.icon;
+
+                  return (
+                    <div
+                      key={technology.name}
+                      className="group rounded-2xl border border-gray-200 bg-gray-50 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-200 hover:bg-indigo-50"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-indigo-600 shadow-sm transition-colors group-hover:bg-indigo-600 group-hover:text-white">
+                          <Icon size={19} />
+                        </div>
+
+                        <div>
+                          <h3 className="font-semibold text-gray-900">
+                            {technology.name}
+                          </h3>
+
+                          <p className="mt-0.5 text-xs text-gray-500">
+                            {technology.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </article>
+
+            {/* Currently exploring */}
+            <article className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm md:p-10">
+              <div className="flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-purple-100 text-purple-600">
+                  <Sparkles size={21} />
+                </div>
+
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider text-purple-600">
+                    Learning & Growth
+                  </p>
+
+                  <h2 className="mt-1 text-2xl font-bold text-gray-950">
+                    Currently Exploring
+                  </h2>
+                </div>
+              </div>
+
+              <p className="mt-5 leading-7 text-gray-600">
+                I'm continuously expanding my development toolkit and learning
+                technologies that help me build more scalable and complete
+                applications.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                {exploring.map((technology) => {
+                  const Icon = technology.icon;
+
+                  return (
+                    <span
+                      key={technology.name}
+                      className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-700"
+                    >
+                      <Icon size={15} />
+                      {technology.name}
+                    </span>
+                  );
+                })}
+              </div>
+            </article>
+          </div>
         </div>
 
-    </div>
-</section>
+        {/* Bottom statement */}
+        <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-indigo-100 bg-gradient-to-r from-indigo-50 via-white to-purple-50 p-8 text-center md:p-10">
+          <h2 className="text-2xl font-bold text-gray-950 sm:text-3xl">
+            Focused on building better web experiences.
+          </h2>
 
+          <p className="mx-auto mt-4 max-w-2xl leading-7 text-gray-600">
+            I care about writing clean code, creating intuitive interfaces,
+            learning continuously, and delivering products that are useful to
+            the people who use them.
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+};
 
-    )
-}
 export default About;
+
