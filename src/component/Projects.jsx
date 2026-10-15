@@ -112,11 +112,11 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={`${project.title} project preview`}
-                  className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className=" aspect-16/10 w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
 
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t  from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                 <span className="absolute right-4 top-4 rounded-full border border-white/20 bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-md">
                   {project.year}
